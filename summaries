@@ -1,0 +1,5 @@
+#!/usr/bin/bash
+
+echo "Ping (google): $(./summary-g.py)"
+echo "Ping (telstra): $(./summary-t.py)"
+./summary-s.py

@@ -1,0 +1,14 @@
+#!/usr/bin/bash
+
+timestamp=`date "+%Y%m%d-%H%M%S"`
+
+echo "speedtest..."
+speedtest-cli > st-$timestamp
+
+echo "ping (google)..."
+ping -c 10 www.google.com.au > pt-g-$timestamp
+
+echo "ping (telstra)..."
+ping -c 10 ns1.telstra.net > pt-t-$timestamp
+
+echo "timestamp was: $timestamp"
